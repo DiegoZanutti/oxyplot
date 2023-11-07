@@ -110,6 +110,7 @@ namespace OxyPlot
             this.TitleColor = OxyColors.Automatic;
             this.SubtitleColor = OxyColors.Automatic;
 
+            this.AxisSizeIsClippingArea = true;
             this.DefaultFont = "Segoe UI";
             this.DefaultFontSize = 12;
 
@@ -166,6 +167,13 @@ namespace OxyPlot
         /// </summary>
         [Obsolete("May be removed in v4.0 (#111)")]
         public event EventHandler Updating;
+
+        /// <summary>
+        /// Gets or sets a value indicating whether size of the axis is clipping series.
+        /// </summary>
+        /// <value>True when clipping</value>
+        /// <remarks>When it's false, instead of getting the minima and maxima of the current axis, the minima and maxima of all axes combined are calculated.</remarks>
+        public bool AxisSizeIsClippingArea { get; set; }
 
         /// <summary>
         /// Gets or sets the default font.
